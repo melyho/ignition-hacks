@@ -2,9 +2,9 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
-const iconClass = "w-8 h-8 hover:opacity-80";
+const iconClass = "w-[80%] aspect-[1:1] hover:opacity-80";
 const iconColor = "565093";
-const sections = ["ignition", "about", "past", "faq", "sponsors"];
+const sections = ["ignition", "about", "past", "faq", "sponsors", "team"];
 
 export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,20 +20,21 @@ export default function Navbar() {
             if (index !== -1) {
               setActiveIndex(index);
               if (progressRef.current) {
-                const percentage = (index / (sections.length - 1)) * 80 + 10;
-                console.log(percentage);
+                const percentage = (index / (sections.length - 1)) * 84 + 8;
                 progressRef.current.style.width = `${percentage}%`;
               }
             }
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.1, root: null }
     );
 
     sections.forEach((id) => {
       const el = document.getElementById(id);
-      if (el) observer.observe(el);
+      if (el) {
+        observer.observe(el);
+      }
     });
 
     return () => observer.disconnect();
@@ -52,11 +53,11 @@ export default function Navbar() {
           <div
             ref={progressRef}
             className="absolute h-full bg-purple-400 rounded-full transition-[width] duration-800 ease-in-out"
-            style={{ width: "10%" }}
+            style={{ width: "8%" }}
           ></div>
 
           {/* Markers */}
-          <div className="absolute top-[120%] left-0 w-full grid grid-cols-5 gap-0 transform -translate-y-1/2">
+          <div className="absolute top-[120%] left-0 w-full grid grid-cols-6 gap-0 transform -translate-y-1/2">
             {sections.map((id, idx) => (
               <a
                 key={id}
@@ -70,7 +71,7 @@ export default function Navbar() {
                       : "bg-white border-black"
                   }`}
                 />
-                <span className="text-sm text-black font-semibold capitalize text-center leading-tight">
+                <span className="text-[1vw] text-black font-semibold capitalize text-center leading-tight">
                   {id === "past" ? "Past Events" : id === "faq" ? "FAQ" : id}
                 </span>
               </a>
@@ -81,7 +82,7 @@ export default function Navbar() {
       <div className="basis-1/5 h-full border-l-[5px] border-l-[#6B6B6B] flex items-center justify-center">
         <div className="flex space-x-6 items-center">
           {/* Email */}
-          <a href="mailto:your.email@example.com" aria-label="Email">
+          <a href="mailto:ignitionhacks@gmail.com" aria-label="Email">
             <img
               src={`https://img.icons8.com/ios-filled/50/${iconColor}/new-post.png`}
               alt="Email"

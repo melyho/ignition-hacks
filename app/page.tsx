@@ -3,11 +3,19 @@ import Image from "next/image";
 import Navbar from "@/components/navbar";
 import Carousel from "@/components/carousel";
 import FaqSection from "@/components/faqSection";
+import Sponsors from "@/components/sponsors";
+import Team from "@/components/team";
 import { useState, useEffect } from "react";
+
+const images = ["/cat.jpeg", "/cat2.jpg"];
 
 export default function Home() {
   const [doorClosed, setDoorClosed] = useState(true);
   const [showTitle, setShowTitle] = useState(false);
+  const [current, setCurrent] = useState(0);
+
+  const next = () => setCurrent((current + 1) % images.length);
+  const prev = () => setCurrent((current - 1 + images.length) % images.length);
 
   useEffect(() => {
     const timeout = setTimeout(() => setDoorClosed(false), 500);
@@ -29,7 +37,7 @@ export default function Home() {
         {/* Hero Section */}
         <section
           id="ignition"
-          className="h-[90vh] w-screen flex items-center justify-center text-center"
+          className="h-[90vh] w-screen flex items-center justify-center text-center scroll-mt-[10vh]"
         >
           <div className="basis-[24%] h-full z-45">
             <div className="h-full w-full">
@@ -120,7 +128,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full h-[40vh]">
+        <section className="w-full h-[40vh scroll-mt-[10vh]">
           <div className="relative w-full h-full bg-[linear-gradient(180deg,#605471,#010101)]">
             <div className="absolute top-0 left-0 h-full w-[24%] transform origin-top-left skew-x-[-30deg] border-r-[8px] bg-black border-r-transparent [border-image:linear-gradient(180deg,#393045,#010101)_1]" />
             <div className="absolute top-0 right-0 h-full w-[24%] transform origin-top-right skew-x-[30deg] bg-black border-l-[8px] border-l-transparent [border-image:linear-gradient(180deg,#393045,#010101)_1]" />
@@ -131,7 +139,7 @@ export default function Home() {
         {/* Other Sections */}
         <section
           id="about"
-          className="text-center flex flex-col items-center justify-center  py-[7vh]"
+          className="text-center flex flex-col items-center justify-center py-[7vh] scroll-mt-[10vh]"
         >
           <div className="flex flex-col gap-[4vh] text-white max-w-[70vw] mx-auto px-4 text-[1.5vw]">
             <h2 className="text-[3vw] font-semibold m-auto text-white">
@@ -159,34 +167,49 @@ export default function Home() {
             </button>
           </div>
 
-          <div className="relative w-full aspect-[2.5/1] mt-[20vh] bg-[url('/Stats.svg')] bg-cover bg-center">
-          </div>
+          <div className="relative w-[76.5%] aspect-[2.5/1] mt-[20vh] bg-[url('/Stats.svg')] bg-cover bg-center"></div>
         </section>
 
         <section
           id="past"
-          className="text-center flex items-center justify-center"
+          className="text-center flex items-center justify-center mt-[20vh] scroll-mt-[10vh]"
         >
-          <div className="relative w-[70%] aspect-[1.2/1] mt-[20vh] bg-[linear-gradient(180deg,#000000,#434343,#2B2B2B)]">
-            <Carousel />
+          <div className="relative w-[70%] aspect-[1.2/1]">
+            <button
+              onClick={prev}
+              className="absolute top-[35%] left-[16%] transform  -translate-y-1/2 -translate-x-1/2 w-[4%] aspect-[59/209] bg-[url('/LeftHandle.svg')] bg-center bg-no-repeat bg-contain hover:scale-105 transition-transform duration-100 ease-in-out z-40 cursor-pointer"
+              aria-label="Previous Slide"
+            ></button>
+
+            <button
+              onClick={next}
+              className="absolute top-[35%] right-[16%] transform -translate-y-1/2 -translate-x-[-50%] w-[4%] aspect-[59/209] bg-[url('/RightHandle.svg')] bg-center bg-no-repeat bg-contain hover:scale-105 transition-transform duration-100 ease-in-out z-40 cursor-pointer"
+              aria-label="Next Slide"
+            ></button>
+            <Carousel current={current} images={images} />
             <Image src="/Carousel.svg" alt="Logo" fill className="absolute" />
           </div>
         </section>
 
         <section
           id="faq"
-          className="w-full text-center flex items-center justify-center"
+          className="relative w-full h-fit mt-[20vh] text-center flex items-center justify-center pb-[10vh] scroll-mt-[10vh]"
         >
-          <div className="relative w-full aspect-[1.2/1] bg-[url('/FAQ.svg')] bg-cover bg-center">
+          <div className="absolute bottom-0 w-full aspect-[1.4/1] bg-[url('/FAQ.svg')] bg-cover bg-bottom z-0"></div>
+          <div className="relative w-full h-fit mb-[10%]">
             <FaqSection />
           </div>
         </section>
 
         <section
           id="sponsors"
-          className="h-[100vh] text-center flex items-center justify-center border px-6"
+          className="w-full h-fit mt-[10vh] text-centers scroll-mt-[10vh]"
         >
-          <h2 className="text-3xl font-semibold m-auto">Sponsor/Team</h2>
+          <Sponsors />
+        </section>
+
+        <section id="team" className="w-full h-fit text-centers">
+          <Team />
         </section>
       </main>
     </div>
