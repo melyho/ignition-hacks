@@ -5,6 +5,7 @@ import Carousel from "@/components/carousel";
 import FaqSection from "@/components/faqSection";
 import Sponsors from "@/components/sponsors";
 import Team from "@/components/team";
+import ProfileTooltip from "@/components/profileTooltip";
 import { useState, useEffect } from "react";
 
 const images = ["/cat.jpeg", "/cat2.jpg"];
@@ -162,9 +163,13 @@ export default function Home() {
               all while fostering a career-forward environment.
             </p>
 
-            <button className="w-[40%] mx-auto mt-6 px-8 py-3 border-2 border-white rounded-xl text-white font-bold text-[2vw] hover:bg-white cursor-pointer hover:text-black transition">
+            <a
+              href="https://forms.gle/bD3zbuwE4mNmLmhdA"
+              className="w-[40%] mx-auto mt-6 px-8 py-3 border-2 border-white rounded-xl text-white font-bold text-[2vw] hover:bg-white cursor-pointer hover:text-black transition"
+              target="_blank" rel="noopener noreferrer"
+            >
               Register Here
-            </button>
+            </a>
           </div>
 
           <div className="relative w-[76.5%] aspect-[2.5/1] mt-[20vh] bg-[url('/Stats.svg')] bg-cover bg-center"></div>

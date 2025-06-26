@@ -1,6 +1,6 @@
-<svg width="1728" height="3300" viewBox="0 0 1728 3300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1728" height="2957" viewBox="0 0 1728 2957" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_3002_72)">
-<rect width="1728" height="3300" fill="black"/>
+<rect width="1728" height="2957" fill="black"/>
 <path d="M527.499 561.989L263.024 561.989C201.26 561.989 142.96 590.526 105.073 639.304L-331.272 1201.08" stroke="#A49BFF" stroke-width="30"/>
 <path d="M1384 1189.22L720.847 1189.23C610.39 1189.23 520.847 1278.77 520.847 1389.23L520.847 1545" stroke="url(#paint0_linear_3002_72)" stroke-width="30"/>
 <path d="M1154.19 1239.09L1154.19 1472L1154.19 314" stroke="url(#paint1_linear_3002_72)" stroke-width="30"/>
@@ -57,7 +57,7 @@
 <stop offset="0.75441" stop-color="#FF9255"/>
 </linearGradient>
 <clipPath id="clip0_3002_72">
-<rect width="1728" height="3300" fill="white"/>
+<rect width="1728" height="2957" fill="white"/>
 </clipPath>
 </defs>
 </svg>
