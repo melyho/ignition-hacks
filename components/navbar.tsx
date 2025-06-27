@@ -41,14 +41,14 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-50 w-full flex justify-between items-center bg-gradient-to-b from-[#DDDDDD] via-[#FFFFFF] to-[#DDDDDD] shadow h-[10vh] border-[5px] border-[#6B6B6B]">
+    <nav className="sticky top-0 z-50 w-full flex justify-between items-center bg-gradient-to-b from-[#DDDDDD] via-[#FFFFFF] to-[#DDDDDD] shadow h-[10vh] min-h-[4rem] border-[5px] border-[#6B6B6B]">
       <div className="basis-1/5 h-full border-r-[5px] border-r-[#6B6B6B] flex justify-between items-center">
         <div className="relative w-13 h-13 m-auto">
           <Image src="/Vector.svg" alt="Logo" fill className="object-contain" />
         </div>
       </div>
-      <div className="basis-3/5 h-full w-full px-10 pt-5">
-        <div className="relative w-full h-4 bg-gray-400 rounded-full">
+      <div className="basis-3/5 h-full w-full px-10 pt-[1.5%]">
+        <div className="relative w-full h-[30%] bg-gray-400 rounded-full">
           {/* Purple fill */}
           <div
             ref={progressRef}
@@ -57,7 +57,7 @@ export default function Navbar() {
           ></div>
 
           {/* Markers */}
-          <div className="absolute top-[120%] left-0 w-full grid grid-cols-6 gap-0 transform -translate-y-1/2">
+          <div className="absolute top-[120%] left-0 w-full h-[300%] grid grid-cols-6 gap-0 transform -translate-y-1/2">
             {sections.map((id, idx) => (
               <a
                 key={id}
@@ -65,7 +65,7 @@ export default function Navbar() {
                 className="flex flex-col items-center w-full"
               >
                 <div
-                  className={`w-6 h-6 mb-1 border-4 rounded-full ${
+                  className={`h-[50%] aspect-[1/1] mb-1 border-4 rounded-full ${
                     idx === activeIndex
                       ? "bg-white border-black"
                       : "bg-white border-black"
@@ -80,7 +80,7 @@ export default function Navbar() {
         </div>
       </div>
       <div className="basis-1/5 h-full border-l-[5px] border-l-[#6B6B6B] flex items-center justify-center">
-        <div className="flex space-x-6 items-center">
+        <div className="flex space-x-[1vw] items-center">
           {/* Email */}
           <a href="mailto:ignitionhacks@gmail.com" aria-label="Email">
             <img

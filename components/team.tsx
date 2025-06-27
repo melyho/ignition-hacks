@@ -26,18 +26,18 @@ const Team = () => {
       <div className="absolute w-[13.5%] aspect[2:1] left-[54.25%] bottom-[68.8%] flex flex-row flex-wrap">
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            imgUrl="/team/Franklin.jpg"
+            name="Franklin Ramirez"
+            role="Co-Chair"
             bgCol={chairBgCol}
             borCol={chairBorCol}
           />
         </div>
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            imgUrl="/team/Helena.jpg"
+            name="Helena Xu"
+            role="Co-Chair"
             bgCol={chairBgCol}
             borCol={chairBorCol}
           />
@@ -51,8 +51,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={directorBgCol}
             borCol={directorBorCol}
           />
@@ -60,8 +60,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={directorBgCol}
             borCol={directorBorCol}
           />
@@ -69,8 +69,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={directorBgCol}
             borCol={directorBorCol}
           />
@@ -78,8 +78,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={directorBgCol}
             borCol={directorBorCol}
           />
@@ -87,8 +87,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={directorBgCol}
             borCol={directorBorCol}
           />
@@ -96,8 +96,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={directorBgCol}
             borCol={directorBorCol}
           />
@@ -105,8 +105,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={directorBgCol}
             borCol={directorBorCol}
           />
@@ -114,8 +114,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={directorBgCol}
             borCol={directorBorCol}
           />
@@ -129,8 +129,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={sponsorshipBgCol}
             borCol={sponsorshipBorCol}
           />
@@ -138,8 +138,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={sponsorshipBgCol}
             borCol={sponsorshipBorCol}
           />
@@ -147,8 +147,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={sponsorshipBgCol}
             borCol={sponsorshipBorCol}
           />
@@ -156,8 +156,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={sponsorshipBgCol}
             borCol={sponsorshipBorCol}
           />
@@ -165,8 +165,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={sponsorshipBgCol}
             borCol={sponsorshipBorCol}
           />
@@ -174,8 +174,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={sponsorshipBgCol}
             borCol={sponsorshipBorCol}
           />
@@ -189,8 +189,8 @@ const Team = () => {
         <div className="w-1/3 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name="Harshpreet Singh"
+            role="Marketing Director"
             bgCol={marketingBgCol}
             borCol={marketingBorCol}
           />
@@ -198,8 +198,8 @@ const Team = () => {
         <div className="w-1/3 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name="Christopher Ma"
+            role="Marketing Executive"
             bgCol={marketingBgCol}
             borCol={marketingBorCol}
           />
@@ -207,8 +207,8 @@ const Team = () => {
         <div className="w-1/3 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name="Neel Patel"
+            role="Marketing Executive"
             bgCol={marketingBgCol}
             borCol={marketingBorCol}
           />
@@ -222,8 +222,8 @@ const Team = () => {
         <div className="w-full aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role="Logistics Director"
             bgCol={logisticsBgCol}
             borCol={logisticsBorCol}
           />
@@ -231,8 +231,8 @@ const Team = () => {
         <div className="w-full aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role="Logistics Director"
             bgCol={logisticsBgCol}
             borCol={logisticsBorCol}
           />
@@ -240,8 +240,8 @@ const Team = () => {
         <div className="w-full aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role="Logistic Executive"
             bgCol={logisticsBgCol}
             borCol={logisticsBorCol}
           />
@@ -251,8 +251,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role="Logistic Executive"
             bgCol={logisticsBgCol}
             borCol={logisticsBorCol}
           />
@@ -260,8 +260,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role="Logistic Executive"
             bgCol={logisticsBgCol}
             borCol={logisticsBorCol}
           />
@@ -269,8 +269,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role="Logistic Executive"
             bgCol={logisticsBgCol}
             borCol={logisticsBorCol}
           />
@@ -278,8 +278,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role="Logistic Executive"
             bgCol={logisticsBgCol}
             borCol={logisticsBorCol}
           />
@@ -293,8 +293,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={uiuxBgCol}
             borCol={uiuxBorCol}
           />
@@ -302,8 +302,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={uiuxBgCol}
             borCol={uiuxBorCol}
           />
@@ -311,8 +311,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={uiuxBgCol}
             borCol={uiuxBorCol}
           />
@@ -320,8 +320,8 @@ const Team = () => {
         <div className="w-1/2 aspect-[1/1] p-[5%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name=""
+            role=""
             bgCol={uiuxBgCol}
             borCol={uiuxBorCol}
           />
@@ -335,8 +335,8 @@ const Team = () => {
         <div className="w-1/4 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name="AJ"
+            role="Development Director"
             bgCol={devBgCol}
             borCol={devBorCol}
           />
@@ -344,8 +344,8 @@ const Team = () => {
         <div className="w-1/4 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name="Melissa Ho"
+            role="Development Director"
             bgCol={devBgCol}
             borCol={devBorCol}
           />
@@ -353,8 +353,8 @@ const Team = () => {
         <div className="w-1/4 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name="Addi"
+            role="Developer"
             bgCol={devBgCol}
             borCol={devBorCol}
           />
@@ -362,8 +362,8 @@ const Team = () => {
         <div className="w-1/4 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name="Alay Parikh"
+            role="Developer"
             bgCol={devBgCol}
             borCol={devBorCol}
           />
@@ -371,8 +371,8 @@ const Team = () => {
         <div className="w-1/4 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name="Aryan Vasudevan"
+            role="Developer"
             bgCol={devBgCol}
             borCol={devBorCol}
           />
@@ -380,8 +380,8 @@ const Team = () => {
         <div className="w-1/4 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name="Di Nguyen"
+            role="Developer"
             bgCol={devBgCol}
             borCol={devBorCol}
           />
@@ -389,8 +389,8 @@ const Team = () => {
         <div className="w-1/4 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name="Karthik Krishna Viriyala"
+            role="Developer"
             bgCol={devBgCol}
             borCol={devBorCol}
           />
@@ -398,8 +398,8 @@ const Team = () => {
         <div className="w-1/4 aspect-[1/1] p-[3%]">
           <ProfileTooltip
             imgUrl="/cat2.jpg"
-            name="test"
-            role="testrole"
+            name="Noah Kostesku"
+            role="Developer"
             bgCol={devBgCol}
             borCol={devBorCol}
           />

@@ -3,7 +3,7 @@ import React from "react";
 const Sponsors = () => {
   return (
     <div className="w-full aspect-[1728/2957] text-center text-white p-8 space-y-12 bg-[url('/SponsorshipBackground.svg')] bg-cover bg-center">
-      <h1 className="text-[7rem] font-bold font-sans mb-[1rem] tracking-wide">
+      <h1 className="text-[7vw] font-bold font-sans mb-[1rem] tracking-wide">
         Sponsors
       </h1>
       <h2 className="text-[1.5rem] text-gray-300 tracking-widest">

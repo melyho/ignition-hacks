@@ -5,7 +5,6 @@ import Carousel from "@/components/carousel";
 import FaqSection from "@/components/faqSection";
 import Sponsors from "@/components/sponsors";
 import Team from "@/components/team";
-import ProfileTooltip from "@/components/profileTooltip";
 import { useState, useEffect } from "react";
 
 const images = ["/cat.jpeg", "/cat2.jpg"];
@@ -129,7 +128,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full h-[40vh scroll-mt-[10vh]">
+        <section className="w-full h-[40vh]">
           <div className="relative w-full h-full bg-[linear-gradient(180deg,#605471,#010101)]">
             <div className="absolute top-0 left-0 h-full w-[24%] transform origin-top-left skew-x-[-30deg] border-r-[8px] bg-black border-r-transparent [border-image:linear-gradient(180deg,#393045,#010101)_1]" />
             <div className="absolute top-0 right-0 h-full w-[24%] transform origin-top-right skew-x-[30deg] bg-black border-l-[8px] border-l-transparent [border-image:linear-gradient(180deg,#393045,#010101)_1]" />
