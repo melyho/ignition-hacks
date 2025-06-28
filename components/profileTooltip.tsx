@@ -30,7 +30,7 @@ const ProfileTooltip: FC<ProfileTooltipProps> = ({
         src={imgUrl}
         alt={name}
         fill
-        className="rounded-full object-cover border-4 border-[#D9D9D9] shadow-lg"
+        className="rounded-full object-cover border-[0.25vw] border-[#D9D9D9] shadow-lg"
         priority
       />
 
@@ -59,8 +59,8 @@ const ProfileTooltip: FC<ProfileTooltipProps> = ({
               className="rounded-xl object-cover"
             />
           </div>
-          <p className="text-center font-semibold text-gray-800">{name}</p>
-          <p className="text-center text-sm text-gray-500">{role}</p>
+          <p className="text-center font-semibold text-black">{name}</p>
+          <p className="text-center text-sm text-gray-900">{role}</p>
         </div>
       </div>
     </div>

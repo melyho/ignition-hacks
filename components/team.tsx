@@ -1,410 +1,295 @@
 import React from "react";
 import ProfileTooltip from "./profileTooltip";
 
-const chairBgCol = "#A49BFF";
-const chairBorCol = "#423e66";
-const directorBgCol = "#FFFFFF";
-const directorBorCol = "#666666";
-const sponsorshipBgCol = "#FF9255";
-const sponsorshipBorCol = "#663a23";
-const marketingBgCol = "#A49BFF";
-const marketingBorCol = "#423e66";
-const logisticsBgCol = "#FFAC7E";
-const logisticsBorCol = "#663a23";
-const uiuxBgCol = "#FFAC7E";
-const uiuxBorCol = "#663a23";
-const devBgCol = "#956AEC";
-const devBorCol = "#402e65";
+type GroupKey =
+  | "chair"
+  | "director"
+  | "sponsorship"
+  | "marketing"
+  | "logistics"
+  | "uiux"
+  | "dev";
+
+const GROUP_STYLES: Record<GroupKey, { bgCol: string; borCol: string }> = {
+  chair: { bgCol: "#A49BFF", borCol: "#423e66" },
+  director: { bgCol: "#FFFFFF", borCol: "#666666" },
+  sponsorship: { bgCol: "#FF9255", borCol: "#663a23" },
+  marketing: { bgCol: "#A49BFF", borCol: "#423e66" },
+  logistics: { bgCol: "#FFAC7E", borCol: "#663a23" },
+  uiux: { bgCol: "#FFAC7E", borCol: "#663a23" },
+  dev: { bgCol: "#956AEC", borCol: "#402e65" },
+};
+
+interface Member {
+  imgUrl: string;
+  name: string;
+  role: string;
+}
+
+interface GroupConfig {
+  key: GroupKey;
+  containerClass: string;
+  itemWrapperClass: string;
+  members: Member[];
+}
+
+const GROUPS: GroupConfig[] = [
+  {
+    key: "chair",
+    containerClass:
+      "absolute w-[13.5%] aspect-[2/1] left-[39%] bottom-[85%] flex flex-row flex-wrap",
+    itemWrapperClass: "w-1/2 aspect-[1/1] p-[5%]",
+    members: [
+      {
+        imgUrl: "/team/Franklin.webp",
+        name: "Franklin Ramirez",
+        role: "Co-Chair",
+      },
+      {
+        imgUrl: "/team/Helena.webp",
+        name: "Helena Xu",
+        role: "Co-Chair",
+      },
+    ],
+  },
+  {
+    key: "director",
+    containerClass:
+      "absolute w-[13.5%] aspect-[1/2] left-[45%] bottom-[42%] flex flex-row flex-wrap",
+    itemWrapperClass: "w-1/2 aspect-[1/1] p-[5%]",
+    members: [
+      {
+        imgUrl: "/team/Daisy.webp",
+        name: "Daisy",
+        role: "Logistics Director",
+      },
+      {
+        imgUrl: "/team/Emily.webp",
+        name: "Emily Yu",
+        role: "Logistics Director",
+      },
+      {
+        imgUrl: "/team/AJ.webp",
+        name: "AJ",
+        role: "Development Director",
+      },
+      {
+        imgUrl: "/team/Melissa.webp",
+        name: "Melissa Ho",
+        role: "Development Director",
+      },
+      {
+        imgUrl: "/cat2.jpg",
+        name: "Faozia Abedin",
+        role: "Sponsorship Director",
+      },
+      {
+        imgUrl: "/team/Jamie.webp",
+        name: "Jamie",
+        role: "Sponsorship Director",
+      },
+      {
+        imgUrl: "/team/Harshpreet.webp",
+        name: "Harshpreet Singh",
+        role: "Marketing Director",
+      },
+      {
+        imgUrl: "/team/Christine.webp",
+        name: "Chris",
+        role: "UI/UX Director",
+      },
+    ],
+  },
+  {
+    key: "sponsorship",
+    containerClass:
+      "absolute w-[13.5%] aspect-[1/1] left-[26%] bottom-[32%] flex flex-row flex-wrap",
+    itemWrapperClass: "w-1/2 aspect-[1/1] p-[5%]",
+    members: [
+      {
+        imgUrl: "/team/Jamie.webp",
+        name: "Jamie",
+        role: "Sponsorship Director",
+      },
+      {
+        imgUrl: "/cat2.jpg",
+        name: "Faozia Abedin",
+        role: "Sponsorship Director",
+      },
+      {
+        imgUrl: "/team/Sanvi.webp",
+        name: "Sanvi Kaushik",
+        role: "Sponsorship Executive",
+      },
+      {
+        imgUrl: "/team/Youssef.webp",
+        name: "Youssef Labidi",
+        role: "Sponsorship Executive",
+      },
+    ],
+  },
+  {
+    key: "marketing",
+    containerClass:
+      "absolute w-[27%] aspect-[4/1] left-[46.3%] bottom-[30%] flex flex-row flex-wrap",
+    itemWrapperClass: "w-1/4 aspect-[1/1] p-[2.5%]",
+    members: [
+      {
+        imgUrl: "/team/Harshpreet.webp",
+        name: "Harshpreet Singh",
+        role: "Marketing Director",
+      },
+      {
+        imgUrl: "/team/Christopher.webp",
+        name: "Christopher Ma",
+        role: "Marketing Executive",
+      },
+      {
+        imgUrl: "/team/Neel.webp",
+        name: "Neel Patel",
+        role: "Marketing Executive",
+      },
+      {
+        imgUrl: "/team/Zoeya.webp",
+        name: "Zoeya Maqbool",
+        role: "Marketing Executive",
+      },
+    ],
+  },
+  {
+    key: "logistics",
+    containerClass:
+      "absolute w-[13.5%] aspect-[2/4] left-[8.7%] bottom-[10%] flex flex-row flex-wrap",
+    itemWrapperClass: "w-1/2 aspect-[1/1] p-[5%]",
+    members: [
+      {
+        imgUrl: "/team/Daisy.webp",
+        name: "Daisy",
+        role: "Logistics Director",
+      },
+      {
+        imgUrl: "/team/Emily.webp",
+        name: "Emily Yu",
+        role: "Logistics Director",
+      },
+      {
+        imgUrl: "/team/Alice.webp",
+        name: "Alice Nguyen",
+        role: "Logistic Executive",
+      },
+      {
+        imgUrl: "/team/Caden.webp",
+        name: "Caden Chen",
+        role: "Logistic Executive",
+      },
+      {
+        imgUrl: "/team/Elisha.webp",
+        name: "Elisha Clarke-Rootham ",
+        role: "Logistic Executive",
+      },
+      {
+        imgUrl: "/team/Jacob.webp",
+        name: "Jacob Tran",
+        role: "Logistic Executive",
+      },
+      {
+        imgUrl: "/team/Sanidhya.webp",
+        name: "Sanidhya Barara",
+        role: "Logistic Executive",
+      },
+      {
+        imgUrl: "/team/Sharon.webp",
+        name: "Sharon Basovich",
+        role: "Logistic Executive",
+      },
+      {
+        imgUrl: "/team/Vishal.webp",
+        name: "Vishal Parvannan",
+        role: "Logistic Executive",
+      },
+    ],
+  },
+  {
+    key: "uiux",
+    containerClass:
+      "absolute w-[33.75%] aspect-[5/1] left-[46.7%] bottom-[9%] flex flex-row flex-wrap",
+    itemWrapperClass: "w-1/5 aspect-[1/1] p-[2%]",
+    members: [
+      {
+        imgUrl: "/team/Christine.webp",
+        name: "Chris",
+        role: "UI/UX Director",
+      },
+      {
+        imgUrl: "/team/Aarnav.webp",
+        name: "Aarnav Shah",
+        role: "UIUX Executive",
+      },
+      {
+        imgUrl: "/team/Ava.webp",
+        name: "Ava So",
+        role: "UIUX Executive",
+      },
+      {
+        imgUrl: "/team/Katrina.webp",
+        name: "Katrina Jin",
+        role: "UIUX Executive",
+      },
+      {
+        imgUrl: "/team/Lily.webp",
+        name: "Lily Song",
+        role: "UIUX Executive",
+      },
+    ],
+  },
+  {
+    key: "dev",
+    containerClass:
+      "absolute w-[13.5%] aspect-[1/1] left-[26%] bottom-[10.4%] flex flex-row flex-wrap",
+    itemWrapperClass: "w-1/2 aspect-[1/1] p-[5%]",
+    members: [
+      {
+        imgUrl: "/team/AJ.webp",
+        name: "AJ",
+        role: "Development Director",
+      },
+      {
+        imgUrl: "/team/Melissa.webp",
+        name: "Melissa Ho",
+        role: "Development Director",
+      },
+      {
+        imgUrl: "/team/Addi.webp",
+        name: "Addi",
+        role: "Developer",
+      },
+      {
+        imgUrl: "/team/Karthik.webp",
+        name: "Karthik Krishna Viriyala",
+        role: "Developer",
+      },
+    ],
+  },
+];
 
 const Team = () => {
   return (
     <div className="w-full aspect-[1630/1253] text-center text-black bg-[url('/MeetTheTeam.svg')] bg-cover bg-center relative">
-      /*Chair*/
-      <p className="absolute left-[47%] bottom-[70%] text-[1.5vw] font-bold tracking-[0.6vw] block">
-        Chair
-      </p>
-      <div className="absolute w-[13.5%] aspect[2:1] left-[54.25%] bottom-[68.8%] flex flex-row flex-wrap">
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/team/Franklin.jpg"
-            name="Franklin Ramirez"
-            role="Co-Chair"
-            bgCol={chairBgCol}
-            borCol={chairBorCol}
-          />
+      {GROUPS.map(({ key, containerClass, itemWrapperClass, members }) => (
+        <div key={key} className={containerClass}>
+          {members.map((m, i) => (
+            <div key={i} className={itemWrapperClass}>
+              <ProfileTooltip
+                imgUrl={m.imgUrl}
+                name={m.name}
+                role={m.role}
+                bgCol={GROUP_STYLES[key].bgCol}
+                borCol={GROUP_STYLES[key].borCol}
+              />
+            </div>
+          ))}
         </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/team/Helena.jpg"
-            name="Helena Xu"
-            role="Co-Chair"
-            bgCol={chairBgCol}
-            borCol={chairBorCol}
-          />
-        </div>
-      </div>
-      /*Directors*/
-      <p className="absolute left-[26.5%] bottom-[32.15%] text-[1.5vw] font-bold tracking-[0.6vw] [writing-mode:vertical-rl] [text-orientation:upright] block">
-        Directors
-      </p>
-      <div className="absolute w-[13.5%] aspect[1:2] left-[29%] bottom-[32.15%] flex flex-row flex-wrap">
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={directorBgCol}
-            borCol={directorBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={directorBgCol}
-            borCol={directorBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={directorBgCol}
-            borCol={directorBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={directorBgCol}
-            borCol={directorBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={directorBgCol}
-            borCol={directorBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={directorBgCol}
-            borCol={directorBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={directorBgCol}
-            borCol={directorBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={directorBgCol}
-            borCol={directorBorCol}
-          />
-        </div>
-      </div>
-      /*Sponsorship*/
-      <p className="absolute left-[45%] bottom-[60.5%] text-[1.5vw] font-bold tracking-[0.42vw] block">
-        Sponsorship
-      </p>
-      <div className="absolute w-[13.5%] aspect[2:3] left-[44.9%] bottom-[33%] flex flex-row flex-wrap">
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={sponsorshipBgCol}
-            borCol={sponsorshipBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={sponsorshipBgCol}
-            borCol={sponsorshipBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={sponsorshipBgCol}
-            borCol={sponsorshipBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={sponsorshipBgCol}
-            borCol={sponsorshipBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={sponsorshipBgCol}
-            borCol={sponsorshipBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={sponsorshipBgCol}
-            borCol={sponsorshipBorCol}
-          />
-        </div>
-      </div>
-      /*Marketing*/
-      <p className="absolute left-[63%] bottom-[35%] text-[1.5vw] font-bold tracking-[0.42vw] block">
-        Marketing
-      </p>
-      <div className="absolute w-[19.3%] aspect[3:1] left-[61.19%] bottom-[39%] flex flex-row flex-wrap">
-        <div className="w-1/3 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="Harshpreet Singh"
-            role="Marketing Director"
-            bgCol={marketingBgCol}
-            borCol={marketingBorCol}
-          />
-        </div>
-        <div className="w-1/3 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="Christopher Ma"
-            role="Marketing Executive"
-            bgCol={marketingBgCol}
-            borCol={marketingBorCol}
-          />
-        </div>
-        <div className="w-1/3 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="Neel Patel"
-            role="Marketing Executive"
-            bgCol={marketingBgCol}
-            borCol={marketingBorCol}
-          />
-        </div>
-      </div>
-      /*Logistics*/
-      <p className="absolute left-[77%] bottom-[55%] text-[1.5vw] font-bold tracking-[0.42vw] block">
-        Logistics
-      </p>
-      <div className="absolute w-[6%] aspect[1:3] left-[82.35%] bottom-[30%] flex flex-col flex-wrap">
-        <div className="w-full aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role="Logistics Director"
-            bgCol={logisticsBgCol}
-            borCol={logisticsBorCol}
-          />
-        </div>
-        <div className="w-full aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role="Logistics Director"
-            bgCol={logisticsBgCol}
-            borCol={logisticsBorCol}
-          />
-        </div>
-        <div className="w-full aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role="Logistic Executive"
-            bgCol={logisticsBgCol}
-            borCol={logisticsBorCol}
-          />
-        </div>
-      </div>
-      <div className="absolute w-[12.5%] aspect[1:1] left-[76.1%] bottom-[12.9%] flex flex-row flex-wrap gap-0 justify-center">
-        <div className="w-1/2 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role="Logistic Executive"
-            bgCol={logisticsBgCol}
-            borCol={logisticsBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role="Logistic Executive"
-            bgCol={logisticsBgCol}
-            borCol={logisticsBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role="Logistic Executive"
-            bgCol={logisticsBgCol}
-            borCol={logisticsBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role="Logistic Executive"
-            bgCol={logisticsBgCol}
-            borCol={logisticsBorCol}
-          />
-        </div>
-      </div>
-      /*UI/UX*/
-      <p className="absolute left-[14.5%] bottom-[35%] text-[1.5vw] font-bold tracking-[0.42vw] block">
-        UI/UX
-      </p>
-      <div className="absolute w-[12.5%] aspect[1:1] left-[11.25%] bottom-[13.75%] flex flex-row flex-wrap">
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={uiuxBgCol}
-            borCol={uiuxBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={uiuxBgCol}
-            borCol={uiuxBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={uiuxBgCol}
-            borCol={uiuxBorCol}
-          />
-        </div>
-        <div className="w-1/2 aspect-[1/1] p-[5%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name=""
-            role=""
-            bgCol={uiuxBgCol}
-            borCol={uiuxBorCol}
-          />
-        </div>
-      </div>
-      /*Dev*/
-      <p className="absolute left-[68%] bottom-[17.5%] text-[1.5vw] font-bold tracking-[0.6vw] [writing-mode:vertical-rl] [text-orientation:upright] block">
-        Dev
-      </p>
-      <div className="absolute w-[27%] aspect[4:2] left-[38.9%] bottom-[12.5%] flex flex-row flex-wrap">
-        <div className="w-1/4 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="AJ"
-            role="Development Director"
-            bgCol={devBgCol}
-            borCol={devBorCol}
-          />
-        </div>
-        <div className="w-1/4 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="Melissa Ho"
-            role="Development Director"
-            bgCol={devBgCol}
-            borCol={devBorCol}
-          />
-        </div>
-        <div className="w-1/4 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="Addi"
-            role="Developer"
-            bgCol={devBgCol}
-            borCol={devBorCol}
-          />
-        </div>
-        <div className="w-1/4 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="Alay Parikh"
-            role="Developer"
-            bgCol={devBgCol}
-            borCol={devBorCol}
-          />
-        </div>
-        <div className="w-1/4 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="Aryan Vasudevan"
-            role="Developer"
-            bgCol={devBgCol}
-            borCol={devBorCol}
-          />
-        </div>
-        <div className="w-1/4 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="Di Nguyen"
-            role="Developer"
-            bgCol={devBgCol}
-            borCol={devBorCol}
-          />
-        </div>
-        <div className="w-1/4 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="Karthik Krishna Viriyala"
-            role="Developer"
-            bgCol={devBgCol}
-            borCol={devBorCol}
-          />
-        </div>
-        <div className="w-1/4 aspect-[1/1] p-[3%]">
-          <ProfileTooltip
-            imgUrl="/cat2.jpg"
-            name="Noah Kostesku"
-            role="Developer"
-            bgCol={devBgCol}
-            borCol={devBorCol}
-          />
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

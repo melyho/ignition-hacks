@@ -14,7 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-black scroll-smooth">
-      <body className={`${satoshi.variable} font-sans antialiased bg-black`}>
+      <body
+        className={`${satoshi.variable} font-sans antialiased bg-black overflow-x-hidden w-full`}
+      >
         {children}
       </body>
     </html>
