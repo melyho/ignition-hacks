@@ -30,8 +30,8 @@ const ProfileTooltip: FC<ProfileTooltipProps> = ({
         src={imgUrl}
         alt={name}
         fill
+        sizes="(max-width:640px) 33vw, 150px"
         className="rounded-full object-cover border-[0.25vw] border-[#D9D9D9] shadow-lg"
-        priority
       />
 
       {/* ── Tooltip panel (re-uses the same image, larger, plus text) ───────── */}
@@ -57,6 +57,7 @@ const ProfileTooltip: FC<ProfileTooltipProps> = ({
               alt={name}
               fill
               className="rounded-xl object-cover"
+              sizes="110px"
             />
           </div>
           <p className="text-center font-semibold text-black">{name}</p>

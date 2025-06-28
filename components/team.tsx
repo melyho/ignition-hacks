@@ -79,7 +79,7 @@ const GROUPS: GroupConfig[] = [
         role: "Development Director",
       },
       {
-        imgUrl: "/cat2.jpg",
+        imgUrl: "/team/filler.webp",
         name: "Faozia Abedin",
         role: "Sponsorship Director",
       },
@@ -112,7 +112,7 @@ const GROUPS: GroupConfig[] = [
         role: "Sponsorship Director",
       },
       {
-        imgUrl: "/cat2.jpg",
+        imgUrl: "/team/filler.webp",
         name: "Faozia Abedin",
         role: "Sponsorship Director",
       },
@@ -274,7 +274,7 @@ const GROUPS: GroupConfig[] = [
 
 const Team = () => {
   return (
-    <div className="w-full aspect-[1630/1253] text-center text-black bg-[url('/MeetTheTeam.svg')] bg-cover bg-center relative">
+    <div className="w-full aspect-[1630/1253] text-center text-black bg-[url('/svg/MeetTheTeam.svg')] bg-cover bg-center relative">
       {GROUPS.map(({ key, containerClass, itemWrapperClass, members }) => (
         <div key={key} className={containerClass}>
           {members.map((m, i) => (
