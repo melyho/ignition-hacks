@@ -2,17 +2,25 @@
 import Image from "next/image";
 import Navbar from "@/components/navbar";
 import { useState, useEffect } from "react";
-import AboutSection from "@/components/AboutSection";
 import RegisterButton from "@/components/RegisterButton";
 import Carousel from "@/components/Carousel";
+import FaqSection from "@/components/faqSection";
+import Sponsors from "@/components/sponsors";
+import Team from "@/components/team";
+
+
+const images = ["/cat.jpeg", "/cat2.jpg"];
 
 export default function Home() {
   const [doorClosed, setDoorClosed] = useState(true);
   const [showTitle, setShowTitle] = useState(false);
-  const images = ["/1.jpg", "/2.jpg", "/3.jpeg"];
+  const [current, setCurrent] = useState(0);
+
+  const next = () => setCurrent((current + 1) % images.length);
+  const prev = () => setCurrent((current - 1 + images.length) % images.length);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setDoorClosed(false), 800);
+    const timeout = setTimeout(() => setDoorClosed(false), 500);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -124,7 +132,7 @@ export default function Home() {
         {/* Other Sections */}
         <section
           id="about"
-          className="text-center flex flex-col items-center justify-center  static py-20">
+          className="text-center flex flex-col items-center justify-center static pt-20">
           <h1 className="text-3xl font-bold mb-6">What is Ignition Hacks?</h1>
           <p className="max-w-2xl mx-auto text-lg leading-relaxed mb-6">
             Ignition Hacks is a student-led hackathon built to empower the next generation of innovative minds.</p>
@@ -139,23 +147,44 @@ export default function Home() {
 
         <section
           id="past"
-          className="h-[100vh] text-center flex items-center justify-center"
+          className="text-center flex items-center justify-center mt-[20vh] scroll-mt-[10vh]"
         >
-          <Carousel images={images} />
+          <div className="relative w-[70%] aspect-[1.2/1]">
+            <button
+              onClick={prev}
+              className="absolute top-[35%] left-[16%] transform  -translate-y-1/2 -translate-x-1/2 w-[4%] aspect-[59/209] bg-[url('/leftcarousel.svg')] bg-center bg-no-repeat bg-contain hover:scale-105 transition-transform duration-100 ease-in-out z-40 cursor-pointer"
+              aria-label="Previous Slide"
+            ></button>
+
+            <button
+              onClick={next}
+              className="absolute top-[35%] right-[16%] transform -translate-y-1/2 -translate-x-[-50%] w-[4%] aspect-[59/209] bg-[url('/rightcarousel.svg')] bg-center bg-no-repeat bg-contain hover:scale-105 transition-transform duration-100 ease-in-out z-40 cursor-pointer"
+              aria-label="Next Slide"
+            ></button>
+            <Carousel current={current} images={images} />
+            <Image src="/subwaycarousel-nobuttons.svg" alt="Logo" fill className="absolute" />
+          </div>
         </section>
 
         <section
           id="faq"
-          className="h-[100vh] text-center flex items-center justify-center"
+          className="relative w-full h-fit mt-[20vh] text-center flex items-center justify-center pb-[10vh] scroll-mt-[10vh]"
         >
-          <h2 className="text-3xl font-semibold m-auto">FAQ</h2>
+          <div className="absolute bottom-0 w-full aspect-[1.4/1] bg-[url('/FAQ.svg')] bg-cover bg-bottom z-0"></div>
+          <div className="relative w-full h-fit mb-[10%]">
+            <FaqSection />
+          </div>
         </section>
 
-        <section
+         <section
           id="sponsors"
-          className="h-[100vh] text-center flex items-center justify-center"
+          className="w-full h-fit mt-[10vh] text-centers scroll-mt-[10vh]"
         >
-          <h2 className="text-3xl font-semibold m-auto">Sponsor/Team</h2>
+          <Sponsors />
+        </section>
+
+        <section id="team" className="w-full h-fit text-centers">
+          <Team />
         </section>
       </main>
     </div>
