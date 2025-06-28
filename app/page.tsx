@@ -8,7 +8,16 @@ import Team from "@/components/team";
 import { useState, useEffect } from "react";
 import RegisterButton from "@/components/RegisterButton";
 
-const images = ["/cat.jpeg", "/cat2.jpg"];
+const images = [
+  "/pastEvents/PastEvent1.jpg",
+  "/pastEvents/PastEvent2.jpg",
+  "/pastEvents/PastEvent3.jpg",
+  "/pastEvents/PastEvent4.jpg",
+  "/pastEvents/PastEvent5.jpg",
+  "/pastEvents/PastEvent6.jpg",
+  "/pastEvents/PastEvent7.jpg",
+  "/pastEvents/PastEvent8.jpg",
+];
 
 export default function Home() {
   const [doorClosed, setDoorClosed] = useState(true);
@@ -50,6 +59,7 @@ export default function Home() {
                     <Image
                       src="/svg/LeftPoster.svg"
                       alt="Logo"
+                      loading="eager"
                       fill
                       className="absolute left-0 mt-5"
                     />
@@ -105,10 +115,15 @@ export default function Home() {
                 showTitle ? "opacity-100" : "opacity-0"
               }`}
             >
-              <Image src="/svg/Title.svg" alt="Logo" fill />
+              <Image loading="eager" src="/svg/Title.svg" alt="Logo" fill />
             </div>
             <div className="absolute bottom-0 w-full h-full opacity-[0.85] sm:mb-[-4rem]">
-              <Image src="/svg/CityBackdrop.svg" alt="Logo" fill />
+              <Image
+                src="/svg/CityBackdrop.svg"
+                alt="Logo"
+                loading="eager"
+                fill
+              />
             </div>
           </div>
           <div className="hidden sm:block w-[24vw] h-full z-45">
@@ -120,6 +135,7 @@ export default function Home() {
                     <Image
                       src="/svg/RightPoster.svg"
                       alt="Logo"
+                      loading="eager"
                       fill
                       className="absolute right-0 mt-5"
                     />
@@ -169,7 +185,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative  w-[90%] sm:w-[76.5%] aspect-[2.5/1] mt-[20vh] bg-[url('/svg/Stats.svg')] bg-cover bg-center"></div>
+          <div className="relative w-[90%] sm:w-[76.5%] aspect-[2.5/1] mt-[20vh] bg-[url('/svg/Stats.svg')] bg-cover bg-center"></div>
         </section>
 
         <section

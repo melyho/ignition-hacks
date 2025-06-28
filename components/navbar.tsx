@@ -43,12 +43,13 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 w-full aspect-[7/1] sm:aspect-[15/1] flex justify-between items-center bg-gradient-to-b from-[#DDDDDD] via-[#FFFFFF] to-[#DDDDDD] shadow border-[5px] border-[#6B6B6B]">
+      <nav className="sticky top-0 z-50 w-full aspect-[7/1] sm:aspect-[15/1] max-h-[12vh] flex justify-between items-center bg-gradient-to-b from-[#DDDDDD] via-[#FFFFFF] to-[#DDDDDD] shadow border-[5px] border-[#6B6B6B]">
         <div className="basis-1/5 sm:border-r-[5px] sm:border-r-[#6B6B6B] flex justify-between items-center h-full">
           <div className="relative h-[70%] aspect-[1/1] m-auto">
             <Image
               src="/svg/Vector.svg"
               alt="Logo"
+              loading="eager"
               fill
               className="object-contain"
             />
@@ -119,9 +120,12 @@ export default function Navbar() {
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <img
+              <Image
                 src="/svg/instagram.svg"
                 alt="Instagram"
+                loading="eager"
+                width={24}
+                height={24}
                 className={iconClass}
               />
             </a>
@@ -133,24 +137,30 @@ export default function Navbar() {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <img
+              <Image
                 src="/svg/linkedin.svg"
                 alt="LinkedIn"
+                loading="eager"
+                width={24}
+                height={24}
                 className={iconClass}
               />
             </a>
 
-            {/* Instagram */}
+            {/* Mail */}
             <a
               href="mailto:ignitionhacks@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Mail"
             >
-              <img
+              <Image
                 src="/svg/mail.svg"
                 alt="Mail"
-                className="w-[auto] h-[1.3rem]"
+                loading="eager"
+                width={20}
+                height={20}
+                className="w-auto h-[1.3rem]"
               />
             </a>
           </div>
@@ -238,9 +248,11 @@ export default function Navbar() {
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <img
+              <Image
                 src="/svg/instagram.svg"
                 alt="Instagram"
+                width={24}
+                height={24}
                 className={iconClass}
               />
             </a>
@@ -250,9 +262,11 @@ export default function Navbar() {
               rel="noopener noreferrer"
               aria-label="LinkedIn"
             >
-              <img
+              <Image
                 src="/svg/linkedin.svg"
                 alt="LinkedIn"
+                width={24}
+                height={24}
                 className={iconClass}
               />
             </a>
@@ -262,9 +276,11 @@ export default function Navbar() {
               rel="noopener noreferrer"
               aria-label="Mail"
             >
-              <img
+              <Image
                 src="/svg/mail.svg"
                 alt="Mail"
+                width={20}
+                height={20}
                 className="w-auto h-[1.3rem]"
               />
             </a>
