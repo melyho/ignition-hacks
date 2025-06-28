@@ -37,7 +37,7 @@ export default function FaqSection() {
   };
 
   return (
-    <div className="w-[50%] ml-[10%] text-black bg-white border-[8px] border-transparent [border-image:linear-gradient(180deg,#9286FF,#8462FF)_1] z-30">
+    <div className=" w-[80%] md:w-[50%] md:ml-[10%] text-black bg-white border-[8px] border-transparent [border-image:linear-gradient(180deg,#9286FF,#8462FF)_1] z-30 mx-auto bottom-10">
       <div className="z-20 w-full h-full px-6 py-10 border-[8px] border-[#7c7c7c] ">
         <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
         {faqs.map((faq, index) => (

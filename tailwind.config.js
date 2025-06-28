@@ -12,7 +12,7 @@ module.exports = {
         brandGray: "#F1F1F1", // custom gray
       },
       fontFamily: {
-        sans: ["var(--font-satoshi)", "sans-serif"],
+        sans: ["var(--font-satoshi)", "sans-serif", "Satoshi"],
       },
     },
   },
