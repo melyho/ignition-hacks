@@ -7,9 +7,7 @@ const Sponsors = () => {
       <h1 className="text-[15vw] sm:text-[7vw] font-bold font-sans mb-[1rem] tracking-wide">
         Sponsors
       </h1>
-      <h2 className="text-[1rem] sm:text-[1.5rem] text-gray-300 tracking-widest">
-        Interested in becoming a sponsor?
-      </h2>
+      
 
       <section className="mt-[8%]">
         <h2 className="text-[2rem] sm:text-[4rem] font-semibold ">
