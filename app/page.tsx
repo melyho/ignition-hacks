@@ -38,7 +38,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-black">
+    <div className="min-h-screen flex flex-col items-center justify-center  bg-[#1b1b1b]">
       {/* Sticky Navbar */}
       <Navbar />
 
@@ -83,7 +83,7 @@ export default function Home() {
             >
               <div className="absolute bg-transparent w-[70%] aspect-[9/16] top-[7.5%] left-[15%] border-[10px] border-[#7072BF] z-40 rounded-[20px] bg-gradient-to-r from-[#8d8fce] to-[#8A87D5]" />
               <div className="absolute right-0 top-0 h-full w-[8px] bg-gradient-to-b from-[#6C6C6C] to-[#100F0F] z-30" />
-              <div className="mt-[70vh] mx-auto px-4 pt-2 pb-0 bg-[#3A3358] w-fit text-white ">
+              <div className="mt-[75vh] mx-auto px-4 pt-2 pb-0 bg-[#3A3358] w-fit text-white">
                 <div className="border-t-2 border-white py-2 text-[0.8rem]/[1rem] width-[100%]">
                   &lt; Hybrid Hackathon &gt;
                 </div>
@@ -104,7 +104,7 @@ export default function Home() {
             >
               <div className="absolute bg-transparent w-[70%] aspect-[9/16] top-[7.5%] left-[15%] border-[10px] border-[#7072BF] z-40 rounded-[20px] bg-gradient-to-r from-[#8d8fce] to-[#8A87D5]" />
               <div className="absolute left-0 top-0 h-full w-[8px] bg-gradient-to-b from-[#6C6C6C] to-[#100F0F] z-30" />
-              <div className="mt-[70vh] mx-auto px-4 pt-2 pb-0 bg-[#3A3358] w-fit text-white ">
+              <div className="mt-[75vh] mx-auto px-4 pt-2 pb-0 bg-[#3A3358] w-fit text-white ">
                 <div className="border-t-2 border-white py-2 text-[0.8rem]/[1rem]">
                   &lt; Register Today &gt;
                 </div>
@@ -147,9 +147,9 @@ export default function Home() {
         </section>
 
         <section className="hidden sm:block w-full h-[40vh]">
-          <div className="relative w-full h-full bg-[linear-gradient(180deg,#605471,#010101)]">
-            <div className="absolute top-0 left-0 h-full w-[24%] transform origin-top-left skew-x-[-30deg] border-r-[8px] bg-black border-r-transparent [border-image:linear-gradient(180deg,#393045,#010101)_1]" />
-            <div className="absolute top-0 right-0 h-full w-[24%] transform origin-top-right skew-x-[30deg] bg-black border-l-[8px] border-l-transparent [border-image:linear-gradient(180deg,#393045,#010101)_1]" />
+          <div className="relative w-full h-full bg-[linear-gradient(180deg,#605471,#1b1b1b)]">
+            <div className="absolute top-0 left-0 h-full w-[24%] transform origin-top-left skew-x-[-30deg] border-r-[8px] bg-[#1b1b1b] border-r-transparent [border-image:linear-gradient(180deg,#393045,#1b1b1b)_1]" />
+            <div className="absolute top-0 right-0 h-full w-[24%] transform origin-top-right skew-x-[30deg] bg-[#1b1b1b] border-l-[8px] border-l-transparent [border-image:linear-gradient(180deg,#393045,#1b1b1b)_1]" />
             <div className="absolute top-0 right-[50%] translate-x-[50%] h-[14px] w-[calc(52%+14px)] bg-[#393045]" />
           </div>
         </section>

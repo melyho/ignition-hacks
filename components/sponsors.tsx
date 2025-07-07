@@ -21,7 +21,7 @@ const Sponsors = () => {
               src="/sponsors/blaze/TheKapCo.png"
               alt="The Kap Co"
               fill
-              className="object-cover"
+              className="object-cover p-2"
             />
           </div>
           <div className="relative w-[25vw] sm:w-[15vw] h-fit aspect-square bg-white rounded-md sm:rounded-3xl m-2">
@@ -85,7 +85,7 @@ const Sponsors = () => {
               src="/sponsors/spark/CryptoChicks.png"
               alt="Crypto Chicks"
               fill
-              className="object-contain"
+              className="object-contain p-2"
             />
           </div>
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
@@ -109,7 +109,7 @@ const Sponsors = () => {
               src="/sponsors/spark/Mef.avif"
               alt="UW Math Endowment Fund"
               fill
-              className="object-contain"
+              className="object-contain p-2"
             />
           </div>
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
@@ -125,7 +125,7 @@ const Sponsors = () => {
               src="/sponsors/spark/NordVpn.png"
               alt="Nord VPN"
               fill
-              className="object-contain"
+              className="object-contain p-2"
             />
           </div>
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
@@ -133,7 +133,7 @@ const Sponsors = () => {
               src="/sponsors/spark/QueensComputing.png"
               alt="Queens Computing"
               fill
-              className="object-contain"
+              className="object-contain p-2"
             />
           </div>
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
@@ -141,7 +141,7 @@ const Sponsors = () => {
               src="/sponsors/spark/Saily.png"
               alt="Saily"
               fill
-              className="object-contain"
+              className="object-contain p-2"
             />
           </div>
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
@@ -149,7 +149,7 @@ const Sponsors = () => {
               src="/sponsors/spark/Scrimba.png"
               alt="Scrimba"
               fill
-              className="object-contain"
+              className="object-contain p-2"
             />
           </div>
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
@@ -157,7 +157,7 @@ const Sponsors = () => {
               src="/sponsors/spark/Wolfram.png"
               alt="Wolfram"
               fill
-              className="object-contain"
+              className="object-contain p-2"
             />
           </div>
         </div>
@@ -197,7 +197,7 @@ const Sponsors = () => {
               src="/sponsors/sponsors/Cleanshot.jpg"
               alt="Cleanshot"
               fill
-              className="object-contain"
+              className="object-contain p-2"
             />
           </div>
           <div className="relative w-[13vw] sm:w-[6.5vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
