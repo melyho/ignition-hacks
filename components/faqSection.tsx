@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "How long will the hackathon last?",
-    answer: "Typically 36 hours from start to submission.",
+    answer: "Typically 24 hours from start to submission.",
   },
   {
     question: "Who can participate?",
