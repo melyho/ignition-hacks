@@ -15,10 +15,6 @@ const faqs = [
     answer: "It's completely free to attend.",
   },
   {
-    question: "Is there a theme for projects?",
-    answer: "Yes! Themes will be announced during opening ceremonies.",
-  },
-  {
     question: "How long will the hackathon last?",
     answer: "Typically 24 hours from start to submission.",
   },
