@@ -128,6 +128,14 @@ const Sponsors = () => {
           </div>
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
             <Image
+              src="/sponsors/spark/NordProtect.png"
+              alt="NordProtect"
+              fill
+              className="object-contain p-2"
+            />
+          </div>
+          <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
+            <Image
               src="/sponsors/spark/QueensComputing.png"
               alt="Queens Computing"
               fill
