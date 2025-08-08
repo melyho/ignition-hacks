@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { satoshi } from "./fonts/satoshi";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Ignition Hacks V6",
-  description: "A hackathon at the intersection of technology and entrepeneurship.",
+  description: "A hackathon at the intersection of technology and entrepreneurship."
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
