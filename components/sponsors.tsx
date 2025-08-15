@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Sponsors = () => {
   return (
@@ -7,7 +8,7 @@ const Sponsors = () => {
       <h1 className="text-[15vw] sm:text-[7vw] font-bold font-sans mb-[1rem] tracking-wide">
         Sponsors
       </h1>
-      
+
 
       <section className="mt-[8%]">
         <h2 className="text-[2rem] sm:text-[4rem] font-semibold ">
@@ -86,14 +87,17 @@ const Sponsors = () => {
               className="object-contain p-2"
             />
           </div>
-          <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
-            <Image
-              src="/sponsors/spark/Incogni.png"
-              alt="Incogni"
-              fill
-              className="object-contain p-2"
-            />
-          </div>
+          <a
+            href="https://incogni.com/" target="_blank">
+            <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
+              <Image
+                src="/sponsors/spark/Incogni.png"
+                alt="Incogni"
+                fill
+                className="object-contain p-2"
+              />
+            </div>
+          </a>
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
             <Image
               src="/sponsors/spark/Keel.png"
@@ -118,14 +122,21 @@ const Sponsors = () => {
               className="object-contain p-2"
             />
           </div>
-          <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
-            <Image
-              src="/sponsors/spark/NordVpn.png"
-              alt="Nord VPN"
-              fill
-              className="object-contain p-2"
-            />
-          </div>
+          <a
+            href="https://nordvpn.com/hackathons"
+            target="_blank"
+            rel="sponsored"
+          >
+            <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
+              <Image
+                src="/sponsors/spark/NordVpn.png"
+                alt="Nord VPN"
+                fill
+                className="object-contain p-2"
+              />
+            </div>
+          </a>
+          <a href="https://nordprotect.com/" target="_blank">
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
             <Image
               src="/sponsors/spark/NordProtect.png"
@@ -134,6 +145,7 @@ const Sponsors = () => {
               className="object-contain p-2"
             />
           </div>
+          </a>
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
             <Image
               src="/sponsors/spark/QueensComputing.png"
@@ -142,14 +154,16 @@ const Sponsors = () => {
               className="object-contain p-2"
             />
           </div>
-          <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
-            <Image
-              src="/sponsors/spark/Saily.png"
-              alt="Saily"
-              fill
-              className="object-contain p-2"
-            />
-          </div>
+          <a href="https://saily.com/ " target="_blank">
+            <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
+              <Image
+                src="/sponsors/spark/Saily.png"
+                alt="Saily"
+                fill
+                className="object-contain p-2"
+              />
+            </div>
+          </a>
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
             <Image
               src="/sponsors/spark/Scrimba.png"
@@ -158,14 +172,14 @@ const Sponsors = () => {
               className="object-contain p-2"
             />
           </div>
-          <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
+          {/* <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
             <Image
               src="/sponsors/spark/Wolfram.png"
               alt="Wolfram"
               fill
               className="object-contain p-2"
             />
-          </div>
+          </div> */}
         </div>
       </section>
 
