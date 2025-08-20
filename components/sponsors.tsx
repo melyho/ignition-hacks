@@ -113,6 +113,11 @@ const Sponsors = () => {
               className="object-contain p-2"
             />
           </div>
+          <a
+            href="https://nordpass.com"
+            target="_blank"
+            rel="sponsored"
+          >
           <div className="relative w-[18vw] sm:w-[9vw] h-fit aspect-square bg-white rounded-md shadow-md m-2">
             <Image
               src="/sponsors/spark/NordPass.png"
@@ -121,6 +126,7 @@ const Sponsors = () => {
               className="object-contain p-2"
             />
           </div>
+          </a>
           <a
             href="https://nordvpn.com/hackathons"
             target="_blank"
